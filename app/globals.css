@@ -1,0 +1,144 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-card: #161b22;
+  --border-color: #30363d;
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --accent: #2f81f7;
+  --accent-glow: rgba(47, 129, 247, 0.18);
+  --warning: #d29922;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 0%, var(--accent-glow), transparent 60%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  padding: 2.75rem 2.25rem;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(210, 153, 34, 0.12);
+  color: var(--warning);
+  border: 1px solid rgba(210, 153, 34, 0.35);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--warning);
+  border-radius: 50%;
+  animation: pulse 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.45;
+  }
+}
+
+.icon-wrapper {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.5rem;
+  border-radius: 16px;
+  background: rgba(47, 129, 247, 0.1);
+  border: 1px solid rgba(47, 129, 247, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.progress-container {
+  background-color: #0d1117;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 45%;
+  background: linear-gradient(90deg, var(--accent), #58a6ff);
+  border-radius: 999px;
+  animation: shimmer 2.2s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    width: 40%;
+  }
+  50% {
+    width: 65%;
+  }
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
