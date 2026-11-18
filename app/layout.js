@@ -1,9 +1,12 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Em Construção | TabNews",
+  title: "TabNews — Em construção",
   description:
-    "Estamos neste exato momento reconstuindo o TabNews, um lugar na internet para quem trabalha com tecnologia e precisa consumir conteúdos com valor concreto.",
+    "Estamos reconstruindo o TabNews, um lugar na internet para quem trabalha com tecnologia e precisa consumir conteúdos com valor concreto.",
+  other: {
+    "theme-color": "#0b0d12",
+  },
 };
 
 export default function RootLayout({ children }) {

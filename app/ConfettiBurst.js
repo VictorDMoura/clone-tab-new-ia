@@ -8,6 +8,11 @@ export default function ConfettiBurst() {
   const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsDone(true);
+      return;
+    }
+
     function updateDimensions() {
       setDimensions({
         width: window.innerWidth,
@@ -33,6 +38,7 @@ export default function ConfettiBurst() {
       height={dimensions.height}
       recycle={false}
       numberOfPieces={250}
+      colors={["#ff7a1a", "#ffb454", "#ffd8a8", "#4c9aff", "#f4f6fa"]}
       onConfettiComplete={() => setIsDone(true)}
       style={{
         position: "fixed",

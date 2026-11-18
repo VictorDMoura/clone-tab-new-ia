@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "chrome-devtools": {
+        "type": "local",
+        "command": [
+          "chrome-devtools-mcp",
+          "--headless",
+          "--isolated",
+          "--viewport=1365x768",
+          "--no-usage-statistics",
+          "--no-performance-crux",
+          "--filesystemRoot=/tmp"
+        ],
+        "timeout": {
+          "startup": 60000
+        }
+      }
+    }
+  }
+}
